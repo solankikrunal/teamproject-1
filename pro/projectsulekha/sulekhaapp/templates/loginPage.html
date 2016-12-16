@@ -1,0 +1,65 @@
+
+<div class="container" ng-show="loginDiv">
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <div class="panel panel-default">
+                <div class="panel-heading" style="text-align:center"> <strong class="">LogIn</strong>
+                </div>
+<div class="panel-body">
+
+<!-- very hapy working on it -->
+
+
+<!-- <div class="container" style="text-align:center"> -->
+	<form name="loginForm" method="GET" action="/sulekha/login">
+<label>UserName</label>
+<input name="myName" ng-model="firName" class="form-control"  placeholder="Enter UserName" required>
+<span ng-show="myForm.myName.$touched && myForm.myName.$invalid">User name is required.</span>
+<br>
+<label>Password</label>
+<input name="myPass" type="password" ng-model="lastName" class="form-control"  placeholder="Enter Password" required>
+<span ng-show="myForm.myName1.$touched && myForm.myName1.$invalid">Password is required.</span>
+<br><br>
+<input type="submit" name="btn" value="LogIn">
+<a ui-sref="#" ng-click="register()">Create an Account?</a>
+</form>
+</div>
+</div></div></div></div>
+<br>
+
+<div class="container" ng-show=registerDiv>
+    <div class="row">
+        <div class="col-md-4 col-md-offset-4">
+            <div class="panel panel-default">
+                <div class="panel-heading" style="text-align:center"> <strong class="">Registration Page</strong>
+                </div>
+<div class="panel-body">
+
+<!-- <div class="container" style="text-align:center" ng-show=registerDiv> -->
+	<form name="registrationForm">
+<label>First Name</label>
+<input name="myName1" ng-model="firName" class="form-control"  placeholder="Enter First Name" required>
+<span ng-show="myForm1.myName1.$touched && myForm1.myName1.$invalid">The first name is required.</span>
+<br>
+<label>Last Name</label>
+<input name="myName2" ng-model="lastName" class="form-control"  placeholder="Enter Last Name" required>
+<span ng-show="myForm1.myName2.$touched && myForm1.myName2.$invalid">The last name is required.</span>
+<br>
+<label>Email</label>
+<input type="email" name="email1" ng-model="email" class="form-control"  placeholder="Enter Email" required>
+<span ng-show="myForm1.email1.$touched && myForm1.email1.$invalid">The email is required.</span>
+<span ng-show="myForm1.email1.$error.email1 && myForm1.email1.$invalid">Enter valid email</span>
+<br>
+<label>Password</label>
+<input type="email" name="password1" ng-model="password1" class="form-control"  placeholder="Enter Password" required>
+<span ng-show="myForm1.password1.$touched && myForm1.password1.$invalid">The password is required.</span>
+<span ng-show="myForm1.password1.$error.pattern">Need atleast one Capital</span>
+<span ng-show="myForm1.password1.$error.maxlength">Must be less than 12 chars</span>
+<span ng-show="myForm1.password1.$error.minlength">Must be more than 8 chars</span>
+<br><br>
+<button class="btn btn-info marg" ng-click="login1()">Register</button>
+</form>
+</div>
+</div></div></div></div>
+
+

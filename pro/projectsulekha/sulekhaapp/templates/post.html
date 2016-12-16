@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="Generator" content="EditPlus®">
+		<meta name="Author" content="">
+		<meta name="Keywords" content="">
+		<meta name="Description" content="">
+		<script src='post.js'></script>
+		<title>Postadd</title>
+		
+	</head>
+	<body>
+	<center>
+		<form action="/sulekha/post/" method="POST" enctype="multipart/form-data">{% csrf_token %}
+	<table>
+	<tr>
+		<td>
+			<label> Type: </label> 
+		</td>
+		<td>
+			<select name="type">
+			<option value="town"> Town House </option>
+			<option value="apartmnet"> Apartment </option>
+			<option value="sr"> Shared Room </option>
+			<option value="sr"> Single Room  </option>
+		</td>
+	</tr></br>
+	<tr>
+		<td>
+			<label> No. Of Rooms </label> 
+		</td>
+		<td>
+			<select name="noofroom">
+			<option value="1"> 1 </option>
+			<option value="2"> 2 </option>
+			<option value="3"> 3 </option>
+			<option value="4"> 4 </option>
+			<option value="5"> 5 </option>
+
+		</td>
+	</tr></br>
+	<tr>
+		<td>
+			<label> Location: </label> 
+		</td>
+		<td>
+			<input type="text" name="location" placeholder="Enter Location" required="required"/>
+		</td>
+	</tr><br>
+	<tr>
+		<td>
+			<label> Address : </label>
+		</td>
+		<td>
+			<textarea name="add" placeholder="Enter an Address"  required="required"></textarea>
+		</td>
+	</tr>
+	<tr>
+		<td>
+			<label> City : </label>
+		</td>
+		<td>
+			<select name="city">
+			<option value="los angeles"> Los Angeles </option>
+			<option value="sf"> San Fransisco </option>
+			<option value="ny"> New York  </option>
+			<option value="nj"> New jersey  </option>
+		</select>
+		</td>
+	<tr>
+	<tr>
+		<td>
+			<label> State: </label> 
+		</td>
+		<td>
+			<input type="text" name="state" placeholder="Enter State Name" required="required"/>
+		</td>
+	</tr><br>
+	<tr>
+		<td>
+			<label> Zipcode : </label>
+		</td>
+		<td>
+			<input type="number" name="number" placeholder="Enter a Zipcode" required="required" maxlength="5" />
+		</td>
+	</tr>
+	<tr>
+		<td> Image :</td>
+		<td> <input type = "file" name = "imgaes"></input></td>
+	</tr>
+	<tr>
+		<td>
+			<label> Details : </label>
+		</td>
+		<td>
+			<textarea name="details" placeholder="Please Enter a Details"  required="required" maxlength="250"></textarea>
+		</td>
+	</tr>
+
+	<tr>
+		<td>
+			<input type="submit" name="button" value="Submit">
+		</td>
+		<td>
+			<input type="reset" name="reset" >
+		</td>
+	</tr>
+	</table>
+</form>
+</center>
+</body>
+</html>
